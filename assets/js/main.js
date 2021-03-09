@@ -7,7 +7,7 @@ var maxTentativi = 84;
 numeriErrore = createErrore(numeriErrore);
 
 //Salvare il punteggio
- var risultato = svolgimento(numeriErrore, numeriGiusti, 100);
+ var risultato = svolgimento(numeriErrore, numeriGiusti, maxTentativi);
 
  console.log("HAI PERSO");
  console.log("Hai totalizzato: " + risultato);

@@ -1,10 +1,7 @@
 //Definisco array
 var numeriErrore = [];
 
-//Contare da 1 a 16
-  //Creare numeri casuali da 1 e 100
-  //Controllare se nei numeri generati ci sono dei duplicati presenti in array
-
+console.log(createErrore(numeriErrore));
 
 
   //Contare 84 (da 1 e 100(numeri totali) - 16(numeri mortali))
@@ -20,11 +17,18 @@ var numeriErrore = [];
 
 // FUNCTIONS
 
-function createErrore(array) {
-  var i = 0;
-  while (i < 16) {
+//Funzione per generare i 16 numeri da non pescare
+function createErrore(dati) {
+  //Contare da 1 a 16
+  while (dati.length < 16) {
+    //Creare numeri casuali da 1 e 100
     var numeroRandom = creatorNumberRandom(1, 100);
+    // Verifico la presenza di duplicati nell'array
+    if (dati.includes(numeroRandom) == false) {
+      dati.push(numeroRandom);
+    }
   }
+  return dati;
 }
 
 
@@ -33,29 +37,3 @@ function createErrore(array) {
 function creatorNumberRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
-
-
-
-
-
-
-
-// var numeriErrore = []
-//
-// arrayBombe = creatorErrore(numeriErrore, 100)
-
-// //Funzione per generare i 16 numeri casuali
-// function creatorErrore(numeriErrore, max) {
-// while (numeriErrore.lenght < 16) {
-//   var numeroRandom = creatorNumberRandom(1, max)
-// }
-//
-//   return numeriErrore;
-// }
-//
-// // Funzione per generare numeri random da minimo a massimo
-// function creatorNumberRandom(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }

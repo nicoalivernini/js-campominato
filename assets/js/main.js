@@ -1,14 +1,13 @@
-//Array contente i 16 numeri casuali generati
+//Definisco array
 var numeriErrore = [];
-//Generare 16 numeri casuali da 1 a 100
-numeriErrore = randomNumber(1, 16);
-console.log(numeroRandom);
-  //Controllare se nei numeri generati ci sono dei duplicati
+
+//Contare da 1 a 16
+  //Creare numeri casuali da 1 e 100
+  //Controllare se nei numeri generati ci sono dei duplicati presenti in array
 
 
 
-
-  //Chiedere all'utente di inserire numeri uno alla volta - capire quante volte
+  //Contare 84 (da 1 e 100(numeri totali) - 16(numeri mortali))
   //L'utente non può inserire più volte lo stesso numero.
   //Controllare se il numero messo dall'utente è presente nella lista dei numeri generati
   //Se presente la partita termina, se non è presente chiedere un altro numero
@@ -21,14 +20,42 @@ console.log(numeroRandom);
 
 // FUNCTIONS
 
-function creatorErrore(min, max) {
-  var numeroRandom = "";
-
-
+function createErrore(array) {
+  var i = 0;
+  while (i < 16) {
+    var numeroRandom = creatorNumberRandom(1, 100);
+  }
 }
 
-// Funzione per generare numeri random da minimo a massimo
 
+
+// Funzione per generare numeri random da minimo a massimo
 function creatorNumberRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+
+
+
+
+
+
+
+// var numeriErrore = []
+//
+// arrayBombe = creatorErrore(numeriErrore, 100)
+
+// //Funzione per generare i 16 numeri casuali
+// function creatorErrore(numeriErrore, max) {
+// while (numeriErrore.lenght < 16) {
+//   var numeroRandom = creatorNumberRandom(1, max)
+// }
+//
+//   return numeriErrore;
+// }
+//
+// // Funzione per generare numeri random da minimo a massimo
+// function creatorNumberRandom(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
